@@ -1,0 +1,40 @@
+{% extends "header_footer.html" %}
+{% block content %}
+<h1>Data Situ di Jakarta dan Sekitar nya</h1>
+<table>
+<form actions="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <tr>
+        <td>{{ form.znama_situ.label }}</td><td>:</td>
+        <td>{{ form.znama_situ (size=30) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.zalamat_situ.label }}</td><td>:</td>
+        <td>{{ form.zalamat_situ (rows="3",cols="50") }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.zair_rata_rata.label }}</td><td>:</td>
+        <td>{{ form.zair_rata_rata (size=50) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.zair_max.label }}</td><td>:</td>
+        <td>{{ form.zair_max (size=50) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.zpembatas.label }}</td><td>:</td>
+        <td>{{ form.zpembatas }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.zlat.label }}</td><td>:</td>
+        <td>{{ form.zlat (size=10) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.zlon.label }}</td><td>:</td>
+        <td>{{ form.zlon (size=10) }}</td>
+    </tr>
+    <tr>
+        <td>{{ form.submit() }} <input type="Button" value="Kembali" onClick="history.back(1)"/></td>
+    </tr>
+</form>
+</table>
+{% endblock %}
